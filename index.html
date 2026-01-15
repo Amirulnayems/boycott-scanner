@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boycott [Target Name] - Join the Movement</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Boycott<span class="highlight">[Target]</span></div>
+        <ul class="nav-links">
+            <li><a href="#why">Why?</a></li>
+            <li><a href="#alternatives">Alternatives</a></li>
+            <li><a href="#act" class="cta-btn">Take Action</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>It's Time to Draw the Line.</h1>
+            <p>We are calling for a total boycott of <strong>[Target Name]</strong> until they address [Core Issue]. Vote with your wallet.</p>
+            <a href="#act" class="hero-btn">Sign the Pledge</a>
+        </div>
+    </header>
+
+    <section id="why" class="container section">
+        <h2>Why We Are Boycotting</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <i class="fas fa-exclamation-triangle icon"></i>
+                <h3>Unethical Practices</h3>
+                <p>Explain the first major reason here. Use facts and clear language to explain what the company did wrong.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-leaf icon"></i>
+                <h3>Environmental Impact</h3>
+                <p>Explain the second reason here. Focus on the impact and why consumers should care.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users icon"></i>
+                <h3>Ignoring Voices</h3>
+                <p>Explain how the entity has ignored previous attempts at dialogue or reform.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="alternatives" class="section bg-light">
+        <div class="container">
+            <h2>Support These Ethical Alternatives</h2>
+            <p class="subtitle">Don't just stop buying; start supporting better options.</p>
+            
+            <div class="alt-list">
+                <div class="alt-item">
+                    <div class="alt-name">Alternative Brand A</div>
+                    <div class="alt-desc">Known for sustainable sourcing and fair wages.</div>
+                </div>
+                <div class="alt-item">
+                    <div class="alt-name">Local Business B</div>
+                    <div class="alt-desc">Support your local community instead of corporate giants.</div>
+                </div>
+                <div class="alt-item">
+                    <div class="alt-name">Co-op Brand C</div>
+                    <div class="alt-desc">Employee-owned and transparent practices.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="act" class="container section">
+        <div class="form-wrapper">
+            <h2>Join the List</h2>
+            <p>We need <strong>10,000</strong> signatures to make our voice heard. Current count: <span id="count">8,432</span></p>
+            
+            <form id="pledgeForm">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required placeholder="Jane Doe">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="jane@example.com">
+                </div>
+                <button type="submit" class="submit-btn">I Pledge to Boycott</button>
+            </form>
+            <p id="success-message" class="hidden">Thank you for standing with us!</p>
+        </div>
+    </section>
+    
+    <section id="scanner" class="container section">
+        <div class="scanner-header">
+            <h2>Barcode Scanner</h2>
+            <p>Easily scan barcodes to detect boycott status instantly.</p>
+        </div>
+
+        <div class="scanner-card">
+            <div class="scanner-viewport">
+                <div id="reader"></div>
+                <div class="scan-overlay">
+                    <div class="scan-frame">
+                        <div class="scan-laser"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scanner-panel">
+                <div class="panel-header">
+                    The result will appear here.
+                </div>
+                
+                <div id="panel-content" class="panel-body">
+                    <p class="placeholder-text">Scan or browse Barcode to preview result here.</p>
+                    
+                    <div id="scan-result" class="hidden">
+                        <h3 id="product-name">Product Name</h3>
+                        <div id="status-badge">STATUS</div>
+                        <p id="status-desc">Description will appear here.</p>
+                        <button id="scan-again-btn" class="cta-btn small">Scan Another</button>
+                    </div>
+
+                    <div id="add-product-form" class="hidden">
+                        <h3>Product Not Found?</h3>
+                        <p style="font-size: 0.9rem;">Add it to our database:</p>
+                        <form id="newProductForm">
+                            <input type="hidden" id="new-barcode">
+                            <input type="text" id="new-name" placeholder="Product Name" required>
+                            <select id="new-status" required>
+                                <option value="boycott">Boycott</option>
+                                <option value="safe">Safe</option>
+                            </select>
+                            <input type="text" id="new-reason" placeholder="Reason">
+                            <button type="submit" class="submit-btn small">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Boycott [Target]. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@example.com">info@example.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

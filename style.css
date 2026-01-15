@@ -1,0 +1,431 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+:root {
+    --primary-color: #e63946; /* Urgent Red */
+    --dark-color: #1d3557;
+    --light-color: #f1faee;
+    --grey-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.cta-btn {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #c1121f;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1600x900/?protest') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.hero-btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--grey-color);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Alternatives List */
+.alt-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.alt-item {
+    background: white;
+    padding: 1.5rem;
+    border-left: 5px solid var(--primary-color);
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.alt-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Form */
+.form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--dark-color);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+#success-message {
+    color: green;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Scanner Styles */
+#reader {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+}
+
+#scan-result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Dynamic Status Colors */
+.status-boycott {
+    background-color: #ffebee;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.status-safe {
+    background-color: #e8f5e9;
+    border: 2px solid #2e7d32;
+    color: #2e7d32;
+}
+
+#status-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: white;
+}
+
+.badge-boycott { background-color: var(--primary-color); }
+.badge-safe { background-color: #2e7d32; }
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Scanner Header */
+.scanner-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* The Main Card Container */
+.scanner-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden; /* Keeps rounded corners clean */
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 400px;
+}
+
+/* --- Left Side: Camera Viewport --- */
+.scanner-viewport {
+    flex: 1.5; /* Takes up 60% of the width */
+    position: relative;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Force the library video to fill the space */
+#reader {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#reader video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 0 !important;
+}
+
+/* Hide the default library borders/buttons to make it clean */
+#reader__scan_region { display: none !important; }
+#reader__dashboard_section_csr button { display: none !important; }
+
+/* --- The Custom Overlay (White Corners + Red Laser) --- */
+.scan-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none; /* Let clicks pass through */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.scan-frame {
+    width: 70%;
+    height: 60%;
+    position: relative;
+    border: 4px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    border-radius: 10px;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5); /* Dim the outside area */
+}
+
+/* The White Corners */
+.scan-frame::before, .scan-frame::after {
+    content: '';
+    position: absolute;
+    width: 20px; height: 20px;
+    border-color: white;
+    border-style: solid;
+    transition: all 0.3s;
+}
+
+/* Top Left & Top Right */
+.scan-frame::before {
+    top: -4px; left: -4px;
+    border-width: 4px 0 0 4px;
+}
+.scan-frame::after {
+    top: -4px; right: -4px;
+    border-width: 4px 4px 0 0;
+}
+
+/* Bottom Left & Bottom Right (Using child pseudoelements trick) */
+.scan-laser {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: red;
+    box-shadow: 0 0 10px red;
+    top: 50%;
+    animation: scan-move 2s infinite ease-in-out;
+}
+
+@keyframes scan-move {
+    0% { top: 10%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 90%; opacity: 0; }
+}
+
+/* --- Right Side: Results Panel --- */
+.scanner-panel {
+    flex: 1; /* Takes up 40% of width */
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #eee;
+}
+
+.panel-header {
+    background: #eef2f5;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #4a5568;
+    border-bottom: 1px solid #ddd;
+}
+
+.panel-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.placeholder-text {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Inputs styling for the panel */
+#newProductForm input, #newProductForm select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .scanner-card {
+        flex-direction: column;
+        height: auto;
+    }
+    .scanner-viewport {
+        height: 300px;
+    }
+}
